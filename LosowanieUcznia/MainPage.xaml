@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LosowanieUcznia.MainPage">
+
+    <StackLayout>
+        <Entry Placeholder="Imie" x:Name="entryName"/>
+        <Entry Placeholder="Nazwisko" x:Name="entrySurname"/>
+        <Entry Placeholder="Klasa" x:Name="entryClass"/>
+        <Button Text="Dodaj osobe" Clicked="OnAddPersonClicked"/>
+
+        <Entry Placeholder="Wpisz klase" x:Name="entryFilterClass"/>
+        <Button Text="Losowa osoba z powyzszej klasy" Clicked="OnRandomPersonFromClassClicked"/>
+        <Button Text="Edycja listy klasy" Clicked="OnEditPeopleListClicked"/>
+        <Label Text="{Binding RandomNumber}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large"/>
+    </StackLayout>
+</ContentPage>
+

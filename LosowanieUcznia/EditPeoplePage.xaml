@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LosowanieUcznia.EditPeoplePage"
+             Title="EditPeoplePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="peopleListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Surname}" />
+                                <Label Text="{Binding Class}" />
+                                <Button Text="Edytuj" Clicked="OnEditClicked" CommandParameter="{Binding .}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Zamknij" Clicked="OnCloseClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
